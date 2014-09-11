@@ -1,10 +1,16 @@
-<%# add navigation links to this file %>
-<li><%= link_to 'About', page_path('about') %></li>
-<% if user_signed_in? %>
-  <li><%= link_to 'Sign out', signout_path %></li>
+<li>
+	<%= link_to 'rsg_github_gem', root_path, class:'navbar-brand' %>
+</li>
+
+<% unless current_user %>
+	<li>
+		<%= link_to "Sign in with Github", "/signin" %>
+	</li>
 <% else %>
-  <li><%= link_to 'Sign in', signin_path %></li>
-<% end %>
-<% if user_signed_in? %>
-  <li><%= link_to 'Users', users_path %></li>
-<% end %>
+	<li>
+		<%= link_to "Github profile", "/github"%>
+	</li>
+<li>
+	<%= link_to "Sign out", "/signout"%>
+</li>
+<% end%>

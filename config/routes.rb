@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'github/index'
+
   resources :users
   root to: 'visitors#index'
   get '/auth/:provider/callback' => 'sessions#create'

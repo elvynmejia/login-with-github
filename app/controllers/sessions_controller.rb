@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
     redirect_to '/auth/github'
   end
 
+  #extract provider name e.g. github  and the unique id of the user of this provider
+  #if there is no user with this params, it will create a new user using the create_with_omniauth mothod
+  #in user model
   def create
     auth = request.env["omniauth.auth"]
     user = User.where(:provider => auth['provider'],
