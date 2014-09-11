@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+	#Associate each profile with its user
+	has_one :github_profile
 
   def self.create_with_omniauth(auth)
     new_user= create! do |user|
