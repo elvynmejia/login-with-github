@@ -1,2 +1,13 @@
-<h1>Github#index</h1>
-<p>Find me in app/views/github/index.html.erb</p>
+<!-- display the basic information for the current user's public repositories-->
+<div class="container">
+	<h1>Public repositories</h1>
+	<ul style="list-style-type:none;">
+		<% @repositories.each do |repo|%>
+		<li>
+			<p><b><%= repo[:name].capitalize %></b>:
+			 <i><%= repo[:description].capitalize%></i>
+			</p>
+		</li>
+		<% end%>
+	</ul>
+</div>
