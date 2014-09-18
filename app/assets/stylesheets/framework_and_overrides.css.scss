@@ -80,3 +80,27 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+
+
+body{
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+img{
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+p#signin{
+  text-align: center;
+}
+p#intro{
+  text-align: center;
+}
+
+h1#welcome{
+  text-align: center;
+
+}

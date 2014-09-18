@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
   		public_gists: auth[:extra][:raw_info][:public_gists]||"",
   		followers: auth[:extra][:raw_info][:followers]||"",
   		following: auth[:extra][:raw_info][:following]||"",
-  		member_since: auth[:extra][:raw_info][:followers]||"",
+  		member_since: auth[:extra][:raw_info][:created_at]||"",
   		access_token: auth[:credentials][:token]
   		})
   end 

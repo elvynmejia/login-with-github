@@ -1,6 +1,10 @@
 <li>
-	<%= link_to 'Rsg Github Gem', root_path, class:'navbar-brand' %>
+	<%= link_to 'About Us', root_path, class:'navbar-brand' %>
 </li>
+<li>
+	<%= link_to 'Contact Us', '#' %>
+</li>
+
 
 <% unless current_user %>
 	<li>
@@ -8,7 +12,7 @@
 	</li>
 <% else %>
 	<li>
-		<%= link_to "Github profile", "/github"%>
+		<%= link_to "Github profile", "/github" %>
 	</li>
 <li>
 	<%= link_to "Sign out", "/signout"%>

@@ -1,17 +1,37 @@
 <div class="container">
-	<% if current_user %>
-		<div><h3>Welcome, <% current_user.name %></h3></div>
-		<img src="<%= current_user.github_profile.image %>" width="100px" 
-		style="float: left;   margin-right: 12px;">
-		<div style="margin-left:120px;">
-			<h4>From: <% current_user.github_profile.location %></h4>
-			<h4> Public repos: <% current_user.github_profile.public_repo%></h4>
-			<h4> Public Gists: <% current_user.github_profile.public_gists %></h4>
-			<h4> Followers: <% current_user.github_profile.followers %></h4>
-			<h4> Following: <% current_user.github_profile.following %></h4>
-			<h4> Member since <% Date.parse current_user.github_profile.bember_since %></h4>
+	<div class="row">
+		<div class="col-md-6">
+			<% if current_user %>
+				<img class="img-responsive img-circle" src="<%= current_user.github_profile.image %>">
+				<h3 style="text-align:center;">Welcome, <%= current_user.name %></h3>
 		</div>
-	<% else %>
-	<h1>Welcome, please login.</h1>
+		<div class="col-md-6" style="margin-top:10px">
+			<h4>From: <%= current_user.github_profile.location %></h4>
+			<h4> Public repos: <%= current_user.github_profile.public_repo%></h4>
+			<h4> Public Gists: <%= current_user.github_profile.public_gists %></h4>
+			<h4> Followers: <%= current_user.github_profile.followers %></h4>
+			<h4> Following: <%= current_user.github_profile.following %></h4>
+		</div>
+	</div>
+
+
+
+
+	<div class="jumbotron">
+
+		<% else %>
+
+		<div class="container">
+			<h1 id="welcome">Welcome!</h1>
+			<p id="intro">
+				<strong>Let professors teach you all the boring and somewhat irrelevant stuff about computer science. At <em style="color:#d9534f">SFSU Coder's Hub  </em> you will learn cutting-edge technologies and gain exposure to different computer science career paths. 
+					
+				We will help you hone your programming skills and prepare you for the job market!</strong>
+			</p>
+			<p id="signin"><a class="btn btn-primary" role="button">Signin with Github</a></p>
+		</div>
+
 	<% end %>
+
+	</div>
 </div>

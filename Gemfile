@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.1'
 gem 'rails', '4.1.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -27,3 +27,8 @@ group :production do
 end
 #build API quiries
 gem "octokit", "~> 3.0"
+#alternative to setting up environments in the Unix shell
+#gem 'figaro'
+gem "figaro", "~> 0.7.0"
+#for Date.parse
+#gem "binding_of_caller"
