@@ -32,3 +32,4 @@ gem "octokit", "~> 3.0"
 gem "figaro", "~> 0.7.0"
 #for Date.parse
 #gem "binding_of_caller"
+gem 'rails_12factor'
