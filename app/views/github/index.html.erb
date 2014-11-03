@@ -6,12 +6,11 @@
 		<li>
 			<p>
 				<b><%= repo[:name].capitalize %></b>: 
-				<i><%= repo[:description].capitalize %>
+				<i><%= repo[:description]%>
 				</i> 
 				<b>[Watchers: <%= repo[:watchers] %>, 
 					Forks: <%= repo[:forks]%>, 
-					Stargazers: <%= repo[:stargazers_count] %>]
-				</b>
+					Stargazers: <%= repo[:stargazers_count] %>]</b>
 			</p>
 		</li>
 		<% end%>
