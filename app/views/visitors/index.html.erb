@@ -2,32 +2,41 @@
 	<div class="row">
 		<div class="col-md-6">
 			<% if current_user %>
+				<h4 style="text-align:center;">Welcome, <%= current_user.name %></h3>
 				<img class="img-responsive img-circle" src="<%= current_user.github_profile.image %>">
-				<h3 style="text-align:center;">Welcome, <%= current_user.name %></h3>
 		</div>
 		<div class="col-md-6" style="margin-top:10px">
-			<h4>From: <%= current_user.github_profile.location %></h4>
-			<h4> Public repos: <%= current_user.github_profile.public_repo%></h4>
-			<h4> Public Gists: <%= current_user.github_profile.public_gists %></h4>
-			<h4> Followers: <%= current_user.github_profile.followers %></h4>
-			<h4> Following: <%= current_user.github_profile.following %></h4>
+			<table class="table table-striped table-hover">
+				  <caption>Basic user profile</caption>
+				 <tr>
+				    <td>From: <%= current_user.github_profile.location %></td>
+				</tr>
+				<tr>
+				    <td>Public repos: <%= current_user.github_profile.public_repo%></td> 
+				</tr>
+				<tr>
+				    <td>Public Gists: <%= current_user.github_profile.public_gists %></td>
+				</tr>
+				<tr>
+				    <td>Followers: <%= current_user.github_profile.followers %></td>
+				</tr>
+				<tr>
+				    <td>Following: <%= current_user.github_profile.following %></td> 
+				</tr>
+			</table>
 		</div>
 	</div>
 
-
 	<div class="jumbotron">
-
 		<% else %>
-
 		<div class="container">
 			<h1 id="welcome">Welcome!</h1>
-			<!--<p id="intro">
-				<strong>Let professors teach you all the boring and somewhat irrelevant stuff about computer science. At <em style="color:#d9534f">SFSU Coder's Hub  </em> you will learn cutting-edge technologies and gain exposure to different computer science career paths. 
-					
-				We will help you hone your programming skills and prepare you for the job market!</strong>
-			</p>-->
 			<p id="intro">
-				This is a Github application that lets you signin with your Github username and password. 
+				This is a simple <em style="color:#d9534f">Github application</em>. Signin with your Github username and password.
+				</br>
+				This application uses the 	
+				<%= link_to('Octokit client', 'https://github.com/octokit/octokit.rb/') %>
+				to create access tokens to authenticate and make simple APIs requests on behalf of users. 
 			</p>
 			<p id="signin"><a class="btn btn-primary" role="button" href=<%= signin_path%>> Signin with Github</a></p>
 

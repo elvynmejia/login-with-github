@@ -1,18 +1,22 @@
 <!-- display the basic information for the current user's public repositories-->
 <div class="container">
-	<h1>Public repositories</h1>
-	<ul style="list-style-type:none;">
+	<table class="table table-bordered table-hover table-condensed">
+		<caption><%= current_user.name %>'s public repositories</caption>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Watchers</th>
+			<th>Forks</th>
+			<th>Stargazers</th>
+		</tr>
 		<% @repositories.each do |repo|%>
-		<li>
-			<p>
-				<b><%= repo[:name].capitalize %></b>: 
-				<i><%= repo[:description]%>
-				</i> 
-				<b>[Watchers: <%= repo[:watchers] %>, 
-					Forks: <%= repo[:forks]%>, 
-					Stargazers: <%= repo[:stargazers_count] %>]</b>
-			</p>
-		</li>
+		<tr>
+			<td><strong><%= repo[:name].capitalize %></strong></td>
+			<td><em><%= repo[:description]%></em></td>
+			<td><%= repo[:watchers] %></td>
+			<td><%= repo[:forks]%></td>
+			<td><%= repo[:stargazers_count] %></td>
+		</tr>
 		<% end%>
-	</ul>
+	</table>
 </div>
