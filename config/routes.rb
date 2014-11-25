@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure'
+  
   get '/github' => 'github#index'
 
 

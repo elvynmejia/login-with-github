@@ -3,7 +3,8 @@
 	<div class="row">
 		<div class="col-md-6">
 			<h4 style="text-align:center;">Welcome, <%= current_user.name %></h4>
-			<img class="github-profile-image img-responsive img-circle" src="<%= current_user.github_profile.image %>">
+			<img class="github-profile-image img-responsive img-circle" 
+				src="<%= current_user.github_profile.image %>">
 		</div>
 		<div class="col-md-6" style="margin-top:10px">
 			<table class="table table-striped table-hover">
@@ -42,6 +43,7 @@
 				to create access tokens to authenticate and make simple APIs requests on behalf of users. 
 			</p>
 			<p id="signin"><a class="btn btn-primary" role="button" href=<%= signin_path%>> Signin with Github</a></p>
+			<p id="signin"><a class="btn btn-primary" role="button" href=<%= signin_path%>> Signin</a></p>
 		</div>
 	</div><!--end jumbotron-->
 
