@@ -1,9 +1,8 @@
 Login with GitHub
 ================
-This web app logs users in with thier GitHub credentials and makes API calls on behalf of users.
+This web app logs users in with their GitHub credentials and makes API calls on behalf of users.
 This app uses the 'omniauth-github' gem
-This web application was created with Rails Composer from the RailsApps project.
-
+-----------
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
 provided by the [RailsApps Project](http://railsapps.github.io/).
 
